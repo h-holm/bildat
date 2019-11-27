@@ -10,13 +10,12 @@ clear all
 % derivatives in two orthogonal directions. Dig. Img Proc. p. 166.
 
 % Robert's diagonal operator.
-deltax = [0 -1; 1 0];
+% deltay = [0 -1; 1 0];
 
 % Sobel operator.
-% deltax = [-1 -2 -1; 0 0 0; 1 2 1]
-deltax = [-1 0 1; -2 0 2; -1 0 1];
-
-deltay = deltax';
+deltay = [1 2 1; 0 0 0; -1 -2 -1];
+% deltax = [-1 0 1; -2 0 2; -1 0 1];
+deltax = deltay';
 
 % Input image.
 tools = few256;
@@ -36,4 +35,5 @@ title('deltay')
 
 %Compare size of tools and dxtools
 size_tools = size(tools)
+size_dxtools = size(dxtools)
 % ------------------------------------------
